@@ -474,3 +474,23 @@
 		}
 	}
 }
+
+/*
+*	Mixin name : border-radius
+*	Mixin Description : Border Radius 정의
+*	
+*   @param $radius (Default : $border-radius)
+*	@param $fallback-border-radius (Default : false)
+*
+*
+*	
+*
+*/
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+	@if $enable-rounded {
+	  	border-radius: valid-radius($radius);
+	}
+	@else if $fallback-border-radius != false {
+	  	border-radius: $fallback-border-radius;
+	}
+}

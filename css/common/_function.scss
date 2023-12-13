@@ -37,3 +37,24 @@ $browser-font-size: 10;
 @function em($px, $context: $browser-font-size) {
 	@return #{calc($px / $context)}em;
 }
+
+/*
+*	Function name : valid-radius
+*	Function Description : radius 체크
+*
+*   @param : $radius
+*   
+*
+*/
+@function valid-radius($radius) {
+	$return: ();
+
+	@each $value in $radius {
+		@if type-of($value) == number {
+			$return: append($return, max($value, 0));
+		} @else {
+			$return: append($return, $value);
+		}
+	}
+	@return $return;
+}

@@ -29,6 +29,14 @@
 *   @param : $context
 *
 */
+/*
+*	Function name : valid-radius
+*	Function Description : radius 체크
+*
+*   @param : $radius
+*   
+*
+*/
 /**
 *   Mixin
 *
@@ -239,6 +247,17 @@
 *	
 *   @param $color (Default : rgba(255, 255, 255, .15))
 *	@param $angle (Default : 45deg)
+*
+*
+*	
+*
+*/
+/*
+*	Mixin name : border-radius
+*	Mixin Description : Border Radius 정의
+*	
+*   @param $radius (Default : $border-radius)
+*	@param $fallback-border-radius (Default : false)
 *
 *
 *	
@@ -4968,6 +4987,38 @@ caption {
     font-size: 1.6rem;
   }
 }
+/*
+*   List Groups
+*
+*   @author GPLUS
+*
+*/
+.list-group,
+.list_group {
+  --gplus-list-group-color: var(--gplus-body-color);
+  --gplus-list-group-bg: var(--gplus-body-bg);
+  --gplus-list-group-border-color: var(--gplus-border-color);
+  --gplus-list-group-border-width: var(--gplus-border-width);
+  --gplus-list-group-border-radius: 4px;
+  --gplus-list-group-item-padding-x: 16px;
+  --gplus-list-group-item-padding-y: 8px;
+  --gplus-list-group-action-color: var(--gplus-secondary-color);
+  --gplus-list-group-action-hover-color: var(--gplus-emphasis-color);
+  --gplus-list-group-action-hover-bg: var(--gplus-tertiary-bg);
+  --gplus-list-group-action-active-color: var(--gplus-body-color);
+  --gplus-list-group-action-active-bg: var(--gplus-secondary-bg);
+  --gplus-list-group-disabled-color: var(--gplus-secondary-color);
+  --gplus-list-group-disabled-bg: var(--gplus-body-bg);
+  --gplus-list-group-active-color: #ffffff;
+  --gplus-list-group-active-bg: #0d6efd;
+  --gplus-list-group-active-border-color: #0d6efd;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: var(--gplus-list-group-border-radius);
+}
+
 /* layout */
 /*
 *   header
