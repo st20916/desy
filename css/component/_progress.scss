@@ -1,0 +1,122 @@
+@if $enable-transitions {
+    @keyframes progress-bar-stripes {
+        0% { 
+            background-position-x: $progress-height; 
+        }
+    }
+}
+
+  
+.progress,
+.progress-stacked,
+.progress_stacked {
+    --#{$prefix}progress-height: #{$progress-height};
+    --#{$prefix}progress-bg: #{$progress-bg};
+    --#{$prefix}progress-border-radius: #{$progress-border-radius};
+    --#{$prefix}progress-box-shadow: #{$progress-box-shadow};
+    --#{$prefix}progress-bar-color: #{$progress-bar-color};
+    --#{$prefix}progress-bar-bg: #{$progress-bar-bg};
+    --#{$prefix}progress-bar-transition: #{$progress-bar-transition};
+
+    display: flex;
+    height: var(--#{$prefix}progress-height);
+    overflow: hidden;
+    font-size: rem(12);
+    background-color: var(--#{$prefix}progress-bg);
+    border-radius: var(--#{$prefix}progress-border-radius);
+    box-shadow: var(--#{$prefix}progress-box-shadow);
+}
+
+.progress-bar,
+.progress_bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--#{$prefix}progress-bar-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--#{$prefix}progress-bar-bg);
+    @include transition(var(--#{$prefix}progress-bar-transition));
+}
+
+.progress-bar-striped,
+.progress_bar_striped {
+    @include gradient-striped();
+    background-size: var(--#{$prefix}progress-height) var(--#{$prefix}progress-height);
+}
+
+.progress-stacked > .progress,
+.progress_stacked > .progress {
+    overflow: visible;
+}
+
+.progress-stacked > .progress > .progress-bar,
+.progress_stacked > .progress > .progress_bar,
+.progress_stacked > .progress > .progress-bar {
+    width: 100%;
+}
+
+.progress {
+    + .progress {
+        margin-top: rem(16);
+    }
+}
+
+.bar-bg-success,
+.bar_bg_success {
+    background: {
+        color: #3ADBAF;
+    }
+    color: rgba(255, 255, 255, .65);
+}
+
+.bar-bg-warning,
+.bar_bg_warning {
+    background: {
+        color: #FFB239;
+    }
+    color: rgba(255, 255, 255, .65);
+}
+
+.bar-bg-error,
+.bar_bg_error {
+    background: {
+        color: #EC5C38;
+    }
+    color: rgba(255, 255, 255, .65);
+}
+
+// ########################## Size
+.progress_tiny,
+.progress-tiny {
+    height: 6px;
+}
+
+.progress_sm,
+.progress-sm {
+    height: 14px;
+}
+
+.progress_lg,
+.progress-lg {
+    height: 40px;
+}
+
+.progress_xl,
+.progress-xl {
+    height: 60px;
+}
+
+@if $enable-transitions {
+    .progress-bar-animated,
+    .progress_bar_animated {
+        animation: $progress-bar-animation-timing progress-bar-stripes;
+  
+        @if $enable-reduced-motion {
+            @media (prefers-reduced-motion: reduce) {
+                animation: none;
+            }
+        }
+    }
+}

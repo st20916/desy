@@ -1,0 +1,95 @@
+/**
+*   Typography
+*
+*   @author GPLUS
+*/
+// ########################## Typography Title
+.typography__title {
+    display: block;
+    font: {
+        size: rem(14);
+    }
+    color: rgba(0, 0, 0, .6);
+}
+
+// ########################## Button Title
+.button__title {
+    font: {
+        size: rem(20);
+        weight: 600;
+    }
+    color: #999999;
+}
+
+// ########################## 공통 h1 ~ h6
+h1 {
+    font: {
+        size: rem(96);
+        weight: 300;
+    }
+}
+
+h2 {
+    font: {
+        size: rem(60);
+        weight: 500;
+    }
+}
+
+h3 {
+    font: {
+        size: rem(48);
+        weight: 400;
+    }
+}
+
+h4 {
+    font: {
+        size: rem(34);
+        weight: 400;
+    }
+}
+
+h5 {
+    font: {
+        size: rem(24);
+        weight: 400;
+    }
+}
+
+h6 {
+    font: {
+        size: rem(20);
+        weight: 500;
+    }
+}
+
+caption {
+    padding: {
+        top: 8px;
+        bottom: 8px;
+    }
+    font: {
+        size: rem(12);
+        weight: 400;
+    }
+    text: {
+        align: left;
+    }
+    color: #6c757d;
+}
+
+// ########################## 공통 Sub Title
+.common__subtitle {
+    font: {
+        size: rem(17);
+        weight: 400;
+    }
+
+    &.subtitle--sm {
+        font: {
+            size: rem(15);
+            weight: 500;
+        }
+    }
+}

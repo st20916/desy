@@ -1,0 +1,340 @@
+/*
+*   button
+*
+*   @author GPLUS
+*
+*/
+// ########################## Button Size
+.btn--xs {
+    padding: 3px 7px;
+    font: {
+        size: rem(13);
+    }
+}
+
+.btn--sm {
+    padding: 7px 9px;
+    font: {
+        size: rem(14);
+    }
+}
+
+.btn--lg {
+    padding: 9px 11px;
+    font: {
+        size: rem(16);
+    }
+}
+
+.btn--xl {
+    font: {
+        size: rem(17);
+    }
+}
+
+.btn--xxl {
+    font: {
+        size: rem(18);
+    }
+}
+
+// ########################## Button Status
+.btn--block {
+    width: 100%;
+}
+
+.btn--static {
+    min-width: 100px;
+}
+
+.btn--half-circle {
+    border: {
+        radius: 15px;
+    }
+}
+
+.btn--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn--table {
+    padding: 4px 16px;
+    border: {
+        radius: 15px;
+    }
+    font: {
+        size: rem(13);
+    }
+}
+
+.btn--modal {
+    min-width: 200px;
+    padding: 5px 7px;
+    font: {
+        size: rem(14);
+        weight: 500;
+    }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .16);
+}
+
+.btn--dashed {
+    padding: 6px 18px;
+    background: {
+        color: #fff;
+    }
+    border: {
+        width: 1px;
+        style: dashed;
+        color: #BBBBBB;
+    }
+}
+
+// ########################## Button 특정
+.btn--top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    flex-direction: column;
+    @include make-wh(45px, 45px);
+    opacity: 0;
+    background: {
+        color: #fff;
+    }
+    border: {
+        width: 1px;
+        color: #F1521F;
+        radius: 0;
+    }
+    font: {
+        size: rem(11);
+        weight: 800;
+    }
+    color: #4A433C;
+    z-index: 2;
+    
+    &:hover {
+        background: {
+            color: #F1521F;
+        }
+        color: #fff;
+    }
+}
+
+.btn--confirm {
+    background: {
+        image: linear-gradient(to bottom, #558CE7, #3375E6);
+    }
+    color: #fff;
+}
+
+.btn--cancel {
+    background: {
+        color: #A1A1A1;
+    }
+    color: #fff;
+}
+
+.btn--more {
+    min-width: 134px;
+    padding: 6px 15px;
+    background: {
+        color: #F2A922;
+    }
+    border: {
+        radius: 16px;
+    }
+    font: {
+        size: rem(16);
+        weight: 600;
+    }
+    color: #fff;
+}
+
+// ########################## Button Color
+// 사용법 :: button-variant(background-color, border-color, color, hover-background-color, hover-color)
+.btn--blue {
+    @include button-variant(#2185D0, transparent, #fff, #fff, #2185D0);
+}
+
+.btn--dark-blue {
+    @include button-variant(#1C6EBA, transparent, #fff, #fff, #1C6EBA);
+}
+
+.btn--orange {
+    @include button-variant(#F2711C, transparent, #fff, #fff, #F2711C);
+}
+
+.btn--mint {
+    @include button-variant(#00B5AD, transparent, #fff, #fff, #00B5AD);
+}
+
+.btn--violet {
+    @include button-variant(#6435C9, transparent, #fff, #fff, #6435C9);
+}
+
+.btn--gray {
+    @include button-variant(#767676, transparent, #fff, #fff, #767676);
+}
+
+.btn--purple {
+    @include button-variant(#A333C8, transparent, #fff, #fff, #A333C8);
+}
+
+.btn--olive {
+    @include button-variant(#B5CC18, transparent, #fff, #fff, #B5CC18);
+}
+
+.btn--sky {
+    @include button-variant(#56A3FB, transparent, #fff, #fff, #56A3FB);
+}
+
+// ########################## Outline Button Color
+// 사용법 :: button-outline-variant(border-color, hover-background-color)
+.btn--outline-blue {
+    @include button-outline-variant(#2185D0, #2185D0);
+}
+
+.btn--outline-dark-blue {
+    @include button-outline-variant(#1C6EBA, #1C6EBA);
+}
+
+.btn--outline-orange {
+    @include button-outline-variant(#F2711C, #F2711C);
+}
+
+.btn--outline-mint {
+    @include button-outline-variant(#00B5AD, #00B5AD);
+}
+
+.btn--outline-violet {
+    @include button-outline-variant(#6435C9, #6435C9);
+}
+
+.btn--outline-gray {
+    @include button-outline-variant(#767676, #767676);
+}
+
+.btn--outline-purple {
+    @include button-outline-variant(#A333C8, #A333C8);
+}
+
+.btn--outline-olive {
+    @include button-outline-variant(#B5CC18, #B5CC18);
+}
+
+.btn--outline-sky {
+    @include button-outline-variant(#56A3FB, #56A3FB);
+}
+
+// ########################## Button Group
+.btn__group,
+.btn__group--vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    border: {
+        radius: 6px;
+    }
+
+    > .btn {
+        position: relative;
+        flex: 1 1 auto;
+
+        &.dropdown-toggle-split,
+        &.dropdown__toggle__split {
+            &:first-child {
+                border: {
+                    top-right-radius: 0;
+                    bottom-right-radius: 0;
+                }
+            }
+        }
+
+        &:nth-child(n + 3) {
+            border: {
+                top-left-radius: 0;
+                bottom-left-radius: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            &:not(.dropdown__toggle),
+            &:not(.dropdown-toggle) {
+                border: {
+                    top-right-radius: 0;
+                    bottom-right-radius: 0;
+                }
+            }
+        }
+    }
+
+    > .btn__group {
+        &:not(:last-child) {
+            > .btn,
+            &:not(.dropdown__toggle),
+            &:not(.dropdown-toggle) {
+                border: {
+                    top-right-radius: 0;
+                    bottom-right-radius: 0;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            margin: {
+                left: -1px;
+            }
+
+            > .btn {
+                border: {
+                    top-left-radius: 0;
+                    bottom-left-radius: 0;
+                }
+            }
+        }
+    }
+
+    > :not(.btn--check) {
+        + .btn {
+            border: {
+                top-left-radius: 0;
+                bottom-left-radius: 0;
+            }
+        }
+    }
+
+    > :not(.btn--check:first-child) {
+        + .btn {
+            margin-left: 1px;
+        }
+    }
+}
+
+
+@media all and (min-width: 1025px) {
+    // ########################## Button Status
+    .btn--modal {
+        font: {
+            size: rem(16);
+        }
+    }
+
+    // ########################## Top button
+    .btn--top {
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+@media all and (min-width: 1240px) {
+    // ########################## Button Status
+    .btn--modal {
+        padding: 11px 13px;
+        font: {
+            size: rem(17);
+        }
+    }
+}

@@ -1,0 +1,476 @@
+/**
+*   Mixin
+*
+*   @author GPLUS
+*/
+
+/*
+*	Mixin name : ellipsis
+*	Mixin Description : 글자 말줄임 처리
+*
+*   @param : $lines
+*
+*	사용법 : @include ellipsis(줄 수 입력);
+*	입력 안 할 시, Default : 1
+*
+*/
+@mixin ellipsis($lines: 1) {
+	@if ($lines == 1) {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	} @else {
+		display: -webkit-box;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-line-clamp: $lines;
+		-webkit-box-orient: vertical;
+	}
+}
+
+/*
+*	Mixin name : lang
+*	Mixin Description : 언어 처리
+*
+*   @param : $lang
+*
+*	사용법 : @include lang(언어 입력);
+*	en, ko
+*
+*/
+@mixin lang($lang) {
+	$langs: 'en', 'ko';
+
+	@if not list.index($langs, $lang) {
+		@if $lang == 'eng' or $lang == 'kor' {
+			@warn '`#{$lang}`이 아니라 `en` 입니다.';
+			$lang: 'en';
+		} @else {
+			@error '`#{$lang}`는 `#{$langs}`에 포함되어 있지 않습니다.';
+		}
+	}
+
+	:lang(#{lang}) {
+		@content;
+	}
+}
+
+/*
+*	Mixin name : center
+*	Mixin Description : 어떠한 영역을 가운데 적용 시 사용
+*
+*	@param
+*
+*
+*/
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*
+*	Mixin name : font-class
+*	Mixin Description : 폰트 사이즈 관련
+*
+*	@param : $size
+*
+*
+*/
+@mixin font-class($size) {
+	.font--#{$size} {
+		font-size: $size;
+	}
+}
+
+/*
+*	Mixin name : sticky-position
+*	Mixin Description : Sticky 관련
+*
+*	@param
+*
+*
+*/
+@mixin sticky-position {
+    position: fixed;
+
+    @supports (position: sticky) {
+        position: sticky;
+    }
+}
+
+/*
+*	Mixin name : btn-hover
+*	Mixin Description : 버튼 hover 관련
+*
+*	@param
+*
+*
+*/
+@mixin btn-hover {
+    &:not([disabled]):hover {
+        @content;
+    }
+}
+
+/*
+*	Mixin name : square
+*	Mixin Description : 넓이와 높이가 같은 정사각형 또는 원을 만들 때
+*
+*	@param  $size
+*   @param  $radius (Default : 0)
+*
+*/
+@mixin square($size, $radius: 0) {
+    width: $size;
+    height: $size;
+
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
+
+/*
+*	Mixin name : make-row
+*	Mixin Description : row 생성
+*
+*	@param  $gutter
+*   @param
+*
+*/
+@mixin make-row($gutter: $grid-gutter-width) {
+	--#{$prefix}gutter-x: #{$gutter};
+	--#{$prefix}gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(-1 * var(--#{$prefix}gutter-y)); // stylelint-disable-line function-disallowed-list
+	margin-right: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
+	margin-left: calc(-.5 * var(--#{$prefix}gutter-x)); // stylelint-disable-line function-disallowed-list
+}
+
+/*
+*	Mixin name : make-col-ready
+*	Mixin Description : col 정의
+*
+*	@param
+*   @param
+*
+*/
+@mixin make-col-ready() {
+	box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+	flex-shrink: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-right: calc(var(--#{$prefix}gutter-x) * .5);
+	padding-left: calc(var(--#{$prefix}gutter-x) * .5);
+	margin-top: var(--#{$prefix}gutter-y);
+}
+
+/*
+*	Mixin name : make-col
+*	Mixin Description : col 생성
+*
+*	@param $size 
+*   @param $columns (Default : 0)
+*
+*/
+@mixin make-col($size: false, $columns: $grid-columns) {
+	@if $size {
+		flex: 0 0 auto;
+		width: percentage(calc($size / $columns));
+	} @else {
+		flex: 1 1 0;
+		max-width: 100%;
+	}
+}
+  
+/*
+*	Mixin name : make-col-auto
+*	Mixin Description : col 기본
+*
+*	@param
+*   @param
+*
+*/
+@mixin make-col-auto() {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+/*
+*	Mixin name : make-wh
+*	Mixin Description : width와 height 설정
+*
+*	@param $width
+*   @param $height
+*
+*/
+@mixin make-wh($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+/*
+*	Mixin name : button-variant
+*	Mixin Description : 버튼 정의 (outline이 아닌)
+*
+*	@param $background
+*   @param $border
+*	@param $color
+*   @param $hover-background
+*	@param $hover-color
+*
+*/
+@mixin button-variant(
+	$background,
+	$border,
+	$color,
+	$hover-background,
+	$hover-color
+) {
+	background: {
+		color: $background;
+	}
+
+	border: {
+		width: 1px;
+		color: $border;
+	}
+
+	color: $color;
+
+	&:hover {
+		background: {
+			color: $hover-background;
+		}
+	
+		border: {
+			color: $hover-color;
+		}
+
+		color: $hover-color;
+	}
+}
+
+/*
+*	Mixin name : button-variant
+*	Mixin Description : 버튼 정의 (outline이 아닌)
+*	
+*   @param $border
+*	@param $hover-background
+*
+*
+*	
+*
+*/
+@mixin button-outline-variant(
+	$border,
+	$hover-background
+) {
+	background: {
+		color: #fff;
+	}
+	border: {
+		width: 1px;
+		color: $border;
+	}
+	color: $hover-background;
+
+	&:hover {
+		background: {
+			color: $hover-background;
+		}
+		border: {
+			color: $hover-background;
+		}
+		color: #fff;
+	}
+}
+
+/*
+*	Mixin name : pagination-size
+*	Mixin Description : Pagination Size 정의
+*	
+*   @param $border
+*	@param $hover-background
+*
+*
+*	
+*
+*/
+@mixin pagination-size($padding-y, $padding-x, $font-size, $border-radius) {
+	--#{$prefix}pagination-padding-x: #{$padding-x};
+	--#{$prefix}pagination-padding-y: #{$padding-y};
+	@include rfs($font-size, --#{$prefix}pagination-font-size);
+	--#{$prefix}pagination-border-radius: #{$border-radius};
+}
+
+/*
+*	Mixin name : caret-down
+*	Mixin Description : 아래쪽 방향 Caret
+*	
+*   @param 
+*	@param 
+*
+*
+*	
+*
+*/
+@mixin caret-down {
+	border-top: $caret-width solid;
+	border-right: $caret-width solid transparent;
+	border-bottom: 0;
+	border-left: $caret-width solid transparent;
+}
+
+/*
+*	Mixin name : caret-uo
+*	Mixin Description : 위쪽 방향 Caret
+*	
+*   @param 
+*	@param 
+*
+*
+*	
+*
+*/
+@mixin caret-up {
+	border-top: 0;
+	border-right: $caret-width solid transparent;
+	border-bottom: $caret-width solid;
+	border-left: $caret-width solid transparent;
+}
+
+/*
+*	Mixin name : caret-end
+*	Mixin Description : 위쪽 방향 Caret
+*	
+*   @param 
+*	@param 
+*
+*
+*	
+*
+*/
+@mixin caret-end {
+	border-top: $caret-width solid transparent;
+	border-right: 0;
+	border-bottom: $caret-width solid transparent;
+	border-left: $caret-width solid;
+}
+
+/*
+*	Mixin name : caret-start
+*	Mixin Description : 위쪽 방향 Caret
+*	
+*   @param 
+*	@param 
+*
+*
+*	
+*
+*/
+@mixin caret-start {
+	border-top: $caret-width solid transparent;
+	border-right: $caret-width solid;
+	border-bottom: $caret-width solid transparent;
+}
+
+/*
+*	Mixin name : caret
+*	Mixin Description : 방향에 따른 caret
+*	
+*   @param $direction (Default : down)
+*	@param 
+*
+*
+*	
+*
+*/
+@mixin caret($direction: down) {
+	@if $enable-caret {
+		&::after {
+			content: "";
+			display: inline-block;
+			margin-left: $caret-spacing;
+			vertical-align: $caret-vertical-align;
+			@if $direction == down {
+				@include caret-down();
+			} @else if $direction == up {
+				@include caret-up();
+			} @else if $direction == end {
+				@include caret-end();
+			}
+	  	}
+  
+		@if $direction == start {
+			&::after {
+				display: none;
+			}
+	
+			&::before {
+				content: "";
+				display: inline-block;
+				margin-right: $caret-spacing;
+				vertical-align: $caret-vertical-align;
+				@include caret-start();
+			}
+		}
+  
+		&:empty::after {
+			margin-left: 0;
+		}
+	}
+}
+
+/*
+*	Mixin name : gradient-striped
+*	Mixin Description : Striped Gradient
+*	
+*   @param $color (Default : rgba(255, 255, 255, .15))
+*	@param $angle (Default : 45deg)
+*
+*
+*	
+*
+*/
+@mixin gradient-striped($color: rgba(#ffffff, .15), $angle: 45deg) {
+	background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+/*
+*	Mixin name : transition
+*	Mixin Description : Transition 관련 mixin
+*	
+*   @param $color (Default : rgba(255, 255, 255, .15))
+*	@param $angle (Default : 45deg)
+*
+*
+*	
+*
+*/
+@mixin transition($transition...) {
+	@if length($transition) == 0 {
+	  	$transition: $transition-base;
+	}
+  
+	@if length($transition) > 1 {
+		@each $value in $transition {
+			@if $value == null or $value == none {
+				@warn "The keyword 'none' or 'null' must be used as a single argument.";
+			}
+		}
+	}
+  
+	@if $enable-transitions {
+		@if nth($transition, 1) != null {
+			transition: $transition;
+		}
+	
+		@if $enable-reduced-motion and nth($transition, 1) != null and nth($transition, 1) != none {
+			@media (prefers-reduced-motion: reduce) {
+				transition: none;
+			}
+		}
+	}
+}

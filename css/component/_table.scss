@@ -1,0 +1,164 @@
+/*
+*   Table
+*
+*   @author GPLUS
+*
+*/
+// ########################## Table
+.table {
+    width: 100%;
+    margin: {
+        bottom: 16px;
+    }
+    border: {
+        color: #DDD;
+    }
+    vertical-align: middle;
+    color: #212529;
+
+    > thead {
+        vertical-align: bottom;
+    }
+
+    > :not(caption) {
+        > * {
+            > * {
+                padding: 8px;
+                background: {
+                    color: transparent;
+                }
+                border: {
+                    bottom-width: 1px;
+                }
+                box-shadow: inset 0 0 0 9999px transparent;
+            }
+        }
+    }
+}
+
+// ########################## Table border
+.table_bordered,
+.table-bordered {
+    > :not(caption) {
+        > * {
+            border: {
+                width: 1px 0;
+            }
+
+            > * {
+                border: {
+                    width: 0 1px;
+                }
+            }
+        }
+    }
+}
+
+// ########################## Table group Divider (tbody에 class 부여)
+.table-group-divider,
+.table_group-divider {
+    border: {
+        top: 2px solid currentcolor;
+    }
+}
+
+// ########################## Table hover
+.table-hover,
+.table_hover {
+    > tbody {
+        tr {
+            &:hover {
+                > * {
+                    background: {
+                        color: rgba(0, 0, 0, .075);
+                    }
+                    color: #212529;
+                }
+            }
+        }
+    }
+}
+
+// ########################## Table Size
+.table-sm,
+.table_sm {
+    > :not(caption) {
+        > * {
+            > * {
+                padding: 4px;
+            }
+        }
+    }
+}
+
+// ########################## Table Caption Position
+.caption-top,
+.caption_top {
+    caption-side: top;
+}
+
+// ########################## Table Responsive (Always)
+.table_responsive,
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+// ########################## Table Color
+// ############## Gray
+.table_gray,
+.table-gray {
+    background: {
+        color: #f9fafb;
+    }
+    color: rgba(0, 0, 0, .8);
+}
+
+.table_blue,
+.table-blue {
+    background: {
+        color: #63A6FC;
+    }
+    color: #fff;
+}
+
+// ########################## Table Responsive breakpoint
+@media all and (max-width: 575.98px) {
+    .table_responsive-sm,
+    .table-responsive-sm {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media all and (max-width: 767.98px) {
+    .table_responsive-md,
+    .table-responsive-md {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media all and (max-width: 1024.98px) {
+    .table_responsive-lg,
+    .table-responsive-lg {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media all and (max-width: 1239.98px) {
+    .table_responsive-xl,
+    .table-responsive-xl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media all and (max-width: 1439.98px) {
+    .table_responsive-xxl,
+    .table-responsive-xxl {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}

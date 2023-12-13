@@ -1,0 +1,223 @@
+/*
+*   login
+*
+*   @author GPLUS
+*
+*/
+.login {
+    position: relative;
+}
+
+.login__wrap {
+    width: 100%;
+    height: 100vh;
+
+    > * {
+        transition: .25s;
+    }
+}
+
+.login__background {
+    height: 25vh;
+}
+
+.login__form__area {
+    height: 75vh;
+}
+
+.login__background {
+    background: {
+        image: url('../../images/login/test_bg.png');
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+
+// ########################## Form 영역
+.login__form__area {
+    position: relative;
+    background: {
+        color: #fff;
+    }
+
+    .login__form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+        border: {
+            width: 1px;
+            style: solid;
+            color: #DDDDDD;
+            radius: 10px;
+        }
+    }
+}
+
+// ########################## Login 프로젝트명
+.login__title {
+    position: relative;
+    font: {
+        size: rem(18);
+        weight: 600;
+    }
+    color: rgba(0, 0, 0, .87);
+    text: {
+        align: center;
+    }
+}
+
+.login__sub {
+    position: relative;
+    font: {
+        size: rem(13);
+        weight: 400;
+    }
+    color: rgba(0, 0, 0, .6);
+    text: {
+        align: center;
+    }
+}
+
+// ########################## 아이디, 비밀번호 찾기
+.login__util {
+    display: flex;
+    align-items: center;
+
+    .login__util__item {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+            color: #5783FF;
+        }
+
+        a {
+            font: {
+                size: rem(13);
+                weight: 400;
+            }
+            text: {
+                decoration: none;
+            }
+            color: rgba(0, 0, 0, .8);
+        }
+    }
+}
+
+
+// ########################## Login 버튼
+.btn--login {
+    background: {
+        color: #2185D0;
+    }
+    border: {
+        width: 1px;
+        style: solid;
+        color: transparent;
+    }
+    color: #fff;
+
+    &:hover {
+        background: {
+            color: #fff;
+        }
+        border: {
+            color: #2185D0;
+        }
+        color: #2185D0;
+    }
+}
+
+// ########################## 회원가입 버튼
+.btn--sign {
+    background: {
+        color: #1B1C1D;
+    }
+    color: #fff;
+
+    border: {
+        width: 1px;
+        style: solid;
+        color: transparent;
+    }
+    color: #fff;
+
+    &:hover {
+        background: {
+            color: #fff;
+        }
+        border: {
+            color: #1B1C1D;
+        }
+        color: #1B1C1D;
+    }
+}
+
+
+@media all and (min-width: 1025px) {
+    .login__wrap {
+        display: flex;
+    }
+
+    .login__background,
+    .login__form__area {
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .login__title {
+        font: {
+            size: rem(20);
+        }
+    }
+
+    .login__sub {
+        font: {
+            size: rem(14);
+        }
+    }
+
+    .login__util {
+        .login__util__item {
+            i {
+                font: {
+                    size: rem(20);
+                }
+            }
+
+            a {
+                font: {
+                    size: rem(14);
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1240px) {
+    .login__form__area {
+        .login__form {
+            max-width: 401px;
+            padding: 65px;
+        }
+    }
+
+    .login__title {
+        font: {
+            size: rem(23);
+        }
+    }
+
+    .login__sub {
+        font: {
+            size: rem(15);
+        }
+    }
+}

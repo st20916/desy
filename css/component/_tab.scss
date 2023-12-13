@@ -1,0 +1,86 @@
+/*
+*   Tab
+*
+*   @author GPLUS
+*
+*/
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: {
+        left: 0;
+    }
+    margin: {
+        bottom: 0;
+    }
+}
+
+.nav_tabs,
+.nav-tabs {
+    border: {
+        bottom: 1px solid #D9D9DA;
+    }
+
+    .nav_link,
+    .nav-link {
+        margin: {
+            bottom: -1px;
+        }
+        border: {
+            width: 1px;
+            style: solid;
+            color: transparent;
+            top-left-radius: 4px;
+            top-right-radius: 4px;
+        }
+
+        &.active {
+            background: {
+                color: #fff;
+            }
+            border: {
+                color: #D9D9DA #D9D9DA #fff;
+            }
+            color: #000;
+        }
+    }
+
+    .nav_item,
+    .nav-item {
+        &.show {
+            .nav_link,
+            .nav-link {
+                background: {
+                    color: #fff;
+                }
+                border: {
+                    color: #D9D9DA #D9D9DA #fff;
+                }
+                color: #000;
+            }
+        }
+    }
+}
+
+.nav_link,
+.nav-link {
+    display: block;
+    padding: 8px 16px;
+    background: 0 0;
+    font: {
+        size: rem(14);
+        weight: 400;
+    }
+    text: {
+        decoration: none;
+    }
+    color: rgba(0, 0, 0, .8);
+    transition: .3s;
+
+    &.disabled,
+    &:disabled {
+        pointer-events: none;
+        cursor: default;
+        color: rgba(33, 37, 41, .75);
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <!-- SEO (Search Engine Optimization) :: 검색 엔진 최적화 :: 구글이나 네이버 등에 자신의 웹 사이트/페이지를 노출할 수 있도록 정보를 최적화 하는 작업 -->
+        <!-- og :: Open Graph의 약자 :: 웹 페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보 지정 -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="G-PLUS" />
+        <meta property="og:title" content="지플러스 디자인 시스템" />
+        <meta property="og:description" content="지플러스 디자인 시스템입니다." />
+        <meta property="og:url" content="http://gplusit.co.kr/" />
+        <!-- Twiiter Card :: 웹 페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보 지정 -->
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="G-PLUS" />
+        <meta property="twitter:title" content="지플러스 디자인 시스템" />
+        <meta property="twitter:description" content="지플러스 디자인 시스템입니다." />
+        <meta property="twitter:url" content="http://gplusit.co.kr/" />
+
+        <!-- favicon (default :: root 경로에 favicon.ico)-->
+        <link rel="icon" href="./images/logo_one.png" />
+
+        <meta charset="UTF-8">
+        <meta name="author" content="(주)지플러스" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지플러스 디자인 시스템</title>
+
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <link rel="import" data-event="import" href="./html/main.html">
+
+        <script src="./js/gplus_design.js"></script>
+    </head>
+    <body>
+        <main class="design">
+            <!-- header -->
+            <header class="header">
+                <div class="header__inner">
+                    <button type="button" class="btn btn--transparent header__button" id="menu">
+                        <i class="ri-menu-2-line"></i>
+                    </button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"><a href="/">Design System</a></li>
+                            <li class="breadcrumb__item active"><a href="javascript:void(0);">home</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h1 class="sidebar__title">知플러스 디자인 시스템</h1>
+                <div class="sidebar__menu">
+                    <ul>
+                        <li><a href="./html/color.html">색</a></li>
+                        <li><a href="./html/layout.html">레이아웃</a></li>
+                        <li><a href="./html/typography.html">타이포그래피</a></li>
+                        <li><a href="./html/button.html">버튼</a></li>
+                        <li><a href="./html/icon.html">아이콘</a></li>
+                        <li><a href="./html/form.html">Form</a></li>
+                        <li><a href="./html/card.html">카드</a></li>
+                        <li><a href="./html/toast.html">Toast</a></li>
+                        <li><a href="./html/menu.html">메뉴</a></li>
+                        <li><a href="./html/tab.html">탭</a></li>
+                        <li><a href="./html/table.html">테이블</a></li>
+                        <li><a href="./html/progress.html">Progress</a></li>
+                        <li><a href="./html/login/login.html" target="_blank">로그인 페이지</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- container -->
+            <div class="container">
+                <button type="button" id="topBtn" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
+            </div>
+        </main>
+    </body>
+</html>

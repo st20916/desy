@@ -1,0 +1,180 @@
+/*
+*   row
+*
+*   @author GPLUS
+*
+*/
+// ########################## 공통 Row
+.common__row {
+    @include make-row();
+
+    > * {
+        @include make-col-ready();
+    }
+}
+
+.row--align-center {
+    align-items: center;
+}
+
+.col-auto {
+    @include make-col-auto();
+}
+
+// ########################## Example Row
+.example__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .btn--top {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        opacity: 1;
+    }
+}
+
+.example__title {
+    position: relative;
+    width: 100%;
+    max-width: 195px;
+    padding: 8px 8px 8px 15px;
+    background: {
+        color: #fff;
+    }
+    border: {
+        width: 1px;
+        color: #DF8FE2;
+        style: solid;
+        radius: 20px;
+    }
+    font: {
+        size: rem(15);
+        weight: 600;
+    }
+    color: #AB0FAB;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: -80%;
+        transform: translate(0, -50%);
+        width: calc(100% - 40px);
+        height: 1px;
+        background: {
+            color: #DF8FE2;
+        }
+    }
+}
+
+@media all and (min-width: 576px) {
+    .col-sm-1 {
+        @include make-col(1);
+    }
+
+    .col-sm-2 {
+        @include make-col(2);
+    }
+
+    .col-sm-3 {
+        @include make-col(3);
+    }
+
+    .col-sm-4 {
+        @include make-col(4);
+    }
+
+    .col-sm-5 {
+        @include make-col(5);
+    }
+
+    .col-sm-6 {
+        @include make-col(6);
+    }
+
+    .col-sm-7 {
+        @include make-col(7);
+    }
+
+    .col-sm-8 {
+        @include make-col(8);
+    }
+
+    .col-sm-9 {
+        @include make-col(9);
+    }
+
+    .col-sm-10 {
+        @include make-col(10);
+    }
+
+    .col-sm-11 {
+        @include make-col(11);
+    }
+
+    .col-sm-12 {
+        @include make-col(12);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .col-md-1 {
+        @include make-col(1);
+    }
+
+    .col-md-2 {
+        @include make-col(2);
+    }
+
+    .col-md-3 {
+        @include make-col(3);
+    }
+
+    .col-md-4 {
+        @include make-col(4);
+    }
+
+    .col-md-5 {
+        @include make-col(5);
+    }
+
+    .col-md-6 {
+        @include make-col(6);
+    }
+
+    .col-md-7 {
+        @include make-col(7);
+    }
+
+    .col-md-8 {
+        @include make-col(8);
+    }
+
+    .col-md-9 {
+        @include make-col(9);
+    }
+
+    .col-md-10 {
+        @include make-col(10);
+    }
+
+    .col-md-11 {
+        @include make-col(11);
+    }
+
+    .col-md-12 {
+        @include make-col(12);
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .example__title {
+        padding: 9px 9px 9px 20px;
+        font: {
+            size: rem(17);
+        }
+    }
+}

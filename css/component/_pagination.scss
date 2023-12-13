@@ -1,0 +1,104 @@
+/*
+*   Pagination
+*
+*   @author GPLUS
+*
+*/
+// ########################## Pagination - bootstrap용
+.pagination {
+    --#{$prefix}pagination-padding-x: #{$pagination-padding-x};
+    --#{$prefix}pagination-padding-y: #{$pagination-padding-y};
+    display: flex;
+    gap: 5px;
+    padding: {
+        left: 0;
+    }
+    list-style: none;
+}
+
+.page-link,
+.page__link {
+    position: relative;
+    display: block;
+    padding: var(--#{$prefix}pagination-padding-y) var(--#{$prefix}pagination-padding-x);
+    background: {
+        color: #fff;
+    }
+    border: {
+        width: 1px;
+        style: solid;
+        color: #CCCCCC;
+    }
+    font: {
+        size: rem(16);
+    }
+    color: #000000;
+    text-decoration: none;
+    transition: .15s;
+
+    &:hover {
+        z-index: 2;
+        background: {
+            color: #51A2B2;
+        }
+        border: {
+            color: #51A2B2;
+        }
+    }
+
+    &.active {
+        z-index: 3;
+        background: {
+            color: #51A2B2;
+        }
+        border: {
+            color: #51A2B2;
+        }
+        color: #fff;
+    }
+
+    &.disabled {
+        background: {
+            color: #fff;
+        }
+        pointer-events: none;
+        color: #6c757d;
+    }
+}
+
+.page__item,
+.page-item {
+    &:not(:first-child) {
+        .page-link,
+        .page__link {
+            margin: {
+                left: -1px;
+            }
+        }
+    }
+}
+
+.active {
+    > .page-link,
+    > .page__link {
+        z-index: 3;
+        background: {
+            color: #51A2B2;
+        }
+        border: {
+            color: #51A2B2;
+        }
+        color: #fff;
+    }
+}
+
+.disabled {
+    > .page-link,
+    > .page__link {
+        background: {
+            color: #fff;
+        }
+        pointer-events: none;
+        color: #6c757d;
+    }
+}

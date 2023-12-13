@@ -1,0 +1,39 @@
+/**
+*   Function / Module
+*
+*   @author GPLUS
+*/
+// 색상, 리스트, 맵 모듈 호출
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:string';
+@use 'sass:math';
+
+$browser-font-size: 10;
+
+/* ###################################### Function */
+
+/*
+*	Function name : rem
+*	Function Description : px -> rem 변환
+*
+*   @param : $px
+*
+*/
+@function rem($px) {
+	@return #{calc($px / $browser-font-size)}rem;
+}
+
+/*
+*	Function name : em
+*	Function Description : px -> em 변환
+*
+*   @param : $pixels
+*   @param : $context
+*
+*/
+@function em($px, $context: $browser-font-size) {
+	@return #{calc($px / $context)}em;
+}

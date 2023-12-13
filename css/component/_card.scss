@@ -1,0 +1,149 @@
+/*
+*   Card
+*
+*   @author GPLUS
+*
+*/
+// ########################## Default Card
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: {
+        color: #fff;
+        clip: border-box;
+    }
+    border: {
+        width: 1px;
+        style: solid;
+        color: #DADADB;
+        radius: 4px;
+    }
+}
+
+// ########################## Card Title
+.card__title,
+.card-title {
+    margin: {
+        bottom: 10px;
+    }
+    font: {
+        size: rem(15);
+        weight: 600;
+    }
+    color: rgba(0, 0, 0, .87);
+}
+
+// ########################## Card Text
+.card__text,
+.card-text {
+    font: {
+        size: rem(13);
+        weight: 400;
+    }
+    color: rgba(0, 0, 0, .8);
+}
+
+// ########################## Card Body
+.card__body,
+.card-body {
+    flex: 1 1 auto;
+    padding: 16px;
+}
+
+// ########################## Card Footer
+.card__footer,
+.card-footer {
+    padding: 8px 16px;
+    background: {
+        color: #fff;
+    }
+    border: {
+        top: 1px solid #DADADB;
+    }
+
+    &:last-child {
+        border: {
+            radius: 0 0 4px 4px;
+        }
+    }
+
+    .card__content {
+        > * {
+            font: {
+                size: rem(13);
+            }
+            color: rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+// ########################## Date
+.card__date {
+    font: {
+        size: rem(13);
+        weight: 400;
+    }
+    color: rgba(0, 0, 0, .4);
+}
+
+.card__content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+// ########################## Card 내 이미지
+.card__img,
+.card-img,
+.card__img__top,
+.card-img-top {
+    border: {
+        top-left-radius: 4px;
+        top-right-radius: 4px;
+    }
+}
+
+// ########################## 버튼 하나만 있을 경우
+[data-card-type="full-button"] {
+    .card__footer {
+        padding: 0;
+
+        button {
+            width: 100%;
+            border: {
+                radius: 0 0 4px 4px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .card__body,
+    .card-body {
+        padding: 20px;
+    }
+    
+    .card__title,
+    .card-title {
+        font: {
+            size: rem(16);
+        }
+    }
+
+    .card__footer,
+    .card-footer {
+        padding: 10px 20px;
+    }
+}
+
+@media all and (min-width: 1240px) {
+    .card__title,
+    .card-title {
+        font: {
+            size: rem(18);
+        }
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="(주)지플러스" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지플러스 디자인 시스템</title>
+
+        <link rel="stylesheet" href="../css/main.css" />
+
+        <script src="../js/gplus_design.js"></script>
+    </head>
+    <body>
+        <main class="design">
+            <!-- header -->
+            <header class="header">
+                <div class="header__inner">
+                    <button type="button" class="btn btn--transparent header__button" id="menu">
+                        <i class="ri-menu-2-line"></i>
+                    </button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"><a href="/">Design System</a></li>
+                            <li class="breadcrumb__item active"><a href="./form.html">Form</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h1 class="sidebar__title">知플러스 디자인 시스템</h1>
+                <div class="sidebar__menu">
+                    <ul>
+                        <li><a href="./color.html">색</a></li>
+                        <li><a href="./layout.html">레이아웃</a></li>
+                        <li><a href="./typography.html">타이포그래피</a></li>
+                        <li><a href="./button.html">버튼</a></li>
+                        <li><a href="./icon.html">아이콘</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                        <li><a href="./card.html">카드</a></li>
+                        <li><a href="./toast.html">Toast</a></li>
+                        <li><a href="./menu.html">메뉴</a></li>
+                        <li><a href="./tab.html">탭</a></li>
+                        <li><a href="./table.html">테이블</a></li>
+                        <li><a href="./progress.html">Progress</a></li>
+                        <li><a href="./login/login.html" target="_blank">로그인 페이지</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- container -->
+            <div class="container">
+                <button type="button" id="topBtn" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
+                <h1 class="container__title mb--25">Forms</h1>
+                <div class="mb--15">
+                    <label class="form__label">User Input</label>
+                    <input type="text" class="form__control" placeholder="examples" />
+                </div>
+                <div class="mb--0">
+                    <label class="form__label">Disabled Input</label>
+                    <input type="text" class="form__control" placeholder="disabled" disabled />
+                </div>
+                <!-- Size -->
+                <h6 class="button__title mt--50 mb--15">Size</h6>
+                <div class="example__row">
+                    <input type="text" class="form__control form__control--sm" placeholder="Small Size" />
+                    <input type="text" class="form__control" placeholder="Normal Size (Default)" />
+                    <input type="text" class="form__control form__control--lg" placeholder="Large Size" />
+                    <input type="text" class="form__control form__control--xl" placeholder="Extra Large Size" />
+                </div>
+                <!-- Readonly Plain Text -->
+                <h6 class="button__title mt--50 mb--15">Readonly Plain Text</h6>
+                <div class="common__row">
+                    <div class="col-auto">
+                        <input type="text" class="form__control--plaintext" value="email@gplusit.co.kr" readonly />
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" class="form__control" placeholder="Password" />
+                    </div>
+                </div>
+                <!-- Select box -->
+                <h6 class="button__title mt--50 mb--15">Datalist</h6>
+                <div class="mb--15">
+                    <label class="form__label">Datalist</label>
+                    <input list="datalistOptions" class="form__control" placeholder="Type to Search" />
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                </div>
+                <!-- Select box -->
+                <h6 class="button__title mt--50 mb--15">Select box</h6>
+                <div class="mb--15">
+                    <label class="form__label">Select box</label>
+                    <select class="form__select">
+                        <option selected disabled>:::: 선택 ::::</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="mb--15">
+                    <select class="form__select" disabled>
+                        <option selected disabled>:::: 선택 ::::</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <!-- Textarea -->
+                <h6 class="button__title mt--50 mb--15">Text Area</h6>
+                <div class="mb--15">
+                    <label class="form__label">Text Area Label</label>
+                    <textarea class="form__control"></textarea>
+                </div>
+                <!-- Check box -->
+                <h6 class="button__title mt--50 mb--15">Check Box</h6>
+                <div class="mb--15">
+                    <div class="form__check">
+                        <input type="checkbox" class="form__check--input" value="" id="testCheckBox">
+                        <label class="form__check--label" for="testCheckBox">Default</label>
+                    </div>
+                    <div class="form__check">
+                        <input type="checkbox" class="form__check--input" value="" id="testCheckBox2" checked>
+                        <label class="form__check--label" for="testCheckBox2">Checked</label>
+                    </div>
+                    <div class="form__check form__check--inline">
+                        <input type="checkbox" class="form__check--input" value="" id="testCheckBox3" checked>
+                        <label class="form__check--label" for="testCheckBox3">Checked</label>
+                    </div>
+                    <div class="form__check form__check--inline">
+                        <input type="checkbox" class="form__check--input" value="" id="testCheckBox4" disabled>
+                        <label class="form__check--label" for="testCheckBox4">Disabled</label>
+                    </div>
+                </div>
+                <!-- Radio box -->
+                <h6 class="button__title mt--50 mb--15">Radio Box</h6>
+                <div class="mb--15">
+                    <div class="form__check">
+                        <input type="radio" class="form__check--input" name="radioInput" id="testRadiokBox">
+                        <label class="form__check--label" for="testRadiokBox">Default</label>
+                    </div>
+                    <div class="form__check">
+                        <input type="radio" class="form__check--input" name="radioInput" id="testRadiokBox2" checked>
+                        <label class="form__check--label" for="testRadiokBox2">Checked</label>
+                    </div>
+                    <div class="form__check form__check--inline">
+                        <input type="radio" class="form__check--input" name="radioInput" id="testRadiokBox3">
+                        <label class="form__check--label" for="testRadiokBox3">Checked</label>
+                    </div>
+                    <div class="form__check form__check--inline">
+                        <input type="radio" class="form__check--input" name="radioInput" id="testRadiokBox4" disabled>
+                        <label class="form__check--label" for="testRadiokBox4">Disabled</label>
+                    </div>
+                </div>
+                <!-- Input group -->
+                <h6 class="button__title mt--50 mb--15">Input Group</h6>
+                <div class="input__group mb--15">
+                    <span class="input__group--text" id="basic-addon1">@</span>
+                    <input type="text" class="form__control" placeholder="User name" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input__group mb--15">
+                    <span class="input__group--text">First and last name</span>
+                    <input type="text" aria-label="First name" class="form__control">
+                    <input type="text" aria-label="Last name" class="form__control">
+                </div>
+                <div class="input__group mb--15">
+                    <input type="text" class="form__control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn--outline-blue" type="button" id="button-addon2">Button</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

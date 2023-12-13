@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="(주)지플러스" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지플러스 디자인 시스템</title>
+
+        <link rel="icon" href="../images/logo_one.png" />
+        <link rel="stylesheet" href="../css/main.css" />
+
+        <script src="../js/gplus_design.js"></script>
+    </head>
+    <body>
+        <main class="design">
+            <!-- header -->
+            <header class="header">
+                <div class="header__inner">
+                    <button type="button" class="btn btn--transparent header__button" id="menu">
+                        <i class="ri-menu-2-line"></i>
+                    </button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"><a href="/">Design System</a></li>
+                            <li class="breadcrumb__item active"><a href="./button.html">Button</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h1 class="sidebar__title">知플러스 디자인 시스템</h1>
+                <div class="sidebar__menu">
+                    <ul>
+                        <li><a href="./color.html">색</a></li>
+                        <li><a href="./layout.html">레이아웃</a></li>
+                        <li><a href="./typography.html">타이포그래피</a></li>
+                        <li><a href="./button.html">버튼</a></li>
+                        <li><a href="./icon.html">아이콘</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                        <li><a href="./card.html">카드</a></li>
+                        <li><a href="./toast.html">Toast</a></li>
+                        <li><a href="./menu.html">메뉴</a></li>
+                        <li><a href="./tab.html">탭</a></li>
+                        <li><a href="./table.html">테이블</a></li>
+                        <li><a href="./progress.html">Progress</a></li>
+                        <li><a href="./login/login.html" target="_blank">로그인 페이지</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- container -->
+            <div class="container">
+                <button type="button" id="topBtn" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
+                <h1 class="container__title mb--25">Button</h1>
+                <h6 class="button__title mb--15">작은 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn btn--sm">기본 버튼</button>
+                    <button type="button" class="btn btn--sm btn--blue">파란색 버튼</button>
+                    <button type="button" class="btn btn--sm btn--orange">오렌지 버튼</button>
+                    <button type="button" class="btn btn--sm btn--mint">민트 버튼</button>
+                    <button type="button" class="btn btn--sm btn--violet">바이올렛 버튼</button>
+                    <button type="button" class="btn btn--sm btn--gray">회색 버튼</button>
+                    <button type="button" class="btn btn--sm btn--purple">보라색 버튼</button>
+                    <button type="button" class="btn btn--sm btn--olive">올리브 버튼</button>
+                </div>
+                <!-- 기본 -->
+                <h6 class="button__title mt--25 mb--15">기본 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn">기본 버튼</button>
+                    <button type="button" class="btn btn--blue">파란색 버튼</button>
+                    <button type="button" class="btn btn--orange">오렌지 버튼</button>
+                    <button type="button" class="btn btn--mint">민트 버튼</button>
+                    <button type="button" class="btn btn--violet">바이올렛 버튼</button>
+                    <button type="button" class="btn btn--gray">회색 버튼</button>
+                    <button type="button" class="btn btn--purple">보라색 버튼</button>
+                    <button type="button" class="btn btn--olive">올리브 버튼</button>
+                </div>
+                <!-- 최소 넓이 -->
+                <h6 class="button__title mt--25 mb--15">최소 넓이 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn btn--static">기본 버튼</button>
+                    <button type="button" class="btn btn--static btn--blue">파란색 버튼</button>
+                    <button type="button" class="btn btn--static btn--orange">오렌지 버튼</button>
+                    <button type="button" class="btn btn--static btn--mint">민트 버튼</button>
+                    <button type="button" class="btn btn--static btn--violet">바이올렛 버튼</button>
+                    <button type="button" class="btn btn--static btn--gray">회색 버튼</button>
+                    <button type="button" class="btn btn--static btn--purple">보라색 버튼</button>
+                    <button type="button" class="btn btn--static btn--olive">올리브 버튼</button>
+                </div>
+                <!-- 최소 넓이 -->
+                <h6 class="button__title mt--25 mb--15">큰 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn btn--lg">기본 버튼</button>
+                    <button type="button" class="btn btn--lg btn--blue">파란색 버튼</button>
+                    <button type="button" class="btn btn--lg btn--orange">오렌지 버튼</button>
+                    <button type="button" class="btn btn--lg btn--mint">민트 버튼</button>
+                    <button type="button" class="btn btn--lg btn--violet">바이올렛 버튼</button>
+                    <button type="button" class="btn btn--lg btn--gray">회색 버튼</button>
+                    <button type="button" class="btn btn--lg btn--purple">보라색 버튼</button>
+                    <button type="button" class="btn btn--lg btn--olive">올리브 버튼</button>
+                </div>
+                <!-- 아이콘 -->
+                <h6 class="button__title mt--25 mb--15">아이콘 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn btn--icon"><i class="ri-pencil-line"></i>기본 버튼</button>
+                    <button type="button" class="btn btn--icon btn--blue"><i class="ri-pencil-line"></i>파란색 버튼</button>
+                    <button type="button" class="btn btn--icon btn--orange"><i class="ri-pencil-line"></i>오렌지 버튼</button>
+                    <button type="button" class="btn btn--icon btn--mint"><i class="ri-pencil-line"></i>민트 버튼</button>
+                    <button type="button" class="btn btn--icon btn--violet"><i class="ri-pencil-line"></i>바이올렛 버튼</button>
+                    <button type="button" class="btn btn--icon btn--gray"><i class="ri-pencil-line"></i>회색 버튼</button>
+                    <button type="button" class="btn btn--icon btn--purple"><i class="ri-pencil-line"></i>보라색 버튼</button>
+                    <button type="button" class="btn btn--icon btn--olive"><i class="ri-pencil-line"></i>올리브 버튼</button>
+                </div>
+                <!-- 기본 -->
+                <h6 class="button__title mt--25 mb--15">아웃라인 버튼</h6>
+                <div class="example__row">
+                    <button type="button" class="btn">기본 버튼</button>
+                    <button type="button" class="btn btn--outline-blue">파란색 버튼</button>
+                    <button type="button" class="btn btn--outline-orange">오렌지 버튼</button>
+                    <button type="button" class="btn btn--outline-mint">민트 버튼</button>
+                    <button type="button" class="btn btn--outline-violet">바이올렛 버튼</button>
+                    <button type="button" class="btn btn--outline-gray">회색 버튼</button>
+                    <button type="button" class="btn btn--outline-purple">보라색 버튼</button>
+                    <button type="button" class="btn btn--outline-olive">올리브 버튼</button>
+                </div>
+                <!-- 다양한 샘플 버튼 -->
+                <h4 class="example__title mt--50 mb--25">다양한 샘플 버튼</h4>
+                <div class="example__row">
+                    <button type="button" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
+                    <button type="button" class="btn btn--xs btn--sky">작은 버튼</button>
+                    <button type="button" class="btn btn--xs btn--dark-blue">작은 버튼</button>
+                    <button type="button" class="btn btn--icon btn--more">더 보기<i class="ri-arrow-right-line"></i></button>
+                    <button type="button" class="btn btn--xs btn--icon btn--outline-mint">검색 분류<i class="ri-external-link-line"></i></button>
+                </div>
+                <!-- -->
+                <h4 class="example__title mt--50 mb--25">Pagination</h4>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page__item"><a class="page__link disabled" href="#">Previous</a></li>
+                        <li class="page__item"><a class="page__link" href="#">1</a></li>
+                        <li class="page__item"><a class="page__link active" href="#">2</a></li>
+                        <li class="page__item"><a class="page__link" href="#">3</a></li>
+                        <li class="page__item"><a class="page__link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+                <!-- -->
+                <h4 class="example__title mt--50 mb--25">테이블 내 버튼</h4>
+                <div class="example__row">
+                    <button type="button" class="btn btn--table btn--outline-blue">매핑</button>
+                    <button type="button" class="btn btn--table btn--outline-blue">추가</button>
+                </div>
+                <!-- -->
+                <h4 class="example__title mt--50 mb--25">아이콘만 있는 버튼</h4>
+                <div class="example__row">
+                    <button type="button" class="btn btn--sm btn--icon btn--half-circle btn--dashed"><i class="ri-delete-bin-line"></i></button>
+                    <button type="button" class="btn btn--sm btn--icon btn--half-circle btn--dashed"><i class="ri-settings-5-fill"></i></button>
+                </div>
+                <!-- -->
+                <h4 class="example__title mt--50 mb--25">라벨 (badges)</h4>
+                <h4 class="button__title mt--25 mb--15">블루 계열 : 정보 활성화</h4>
+                <div class="example__row">
+                    <label class="badges badges--blue">badges</label>
+                    <label class="badges badges--icon badges--blue"><i class="ri-pass-pending-line"></i>badges</label>
+                    <label class="badges badges--icon badges--navy"><i class="ri-pass-pending-line"></i>badges</label>
+                </div>
+                <h4 class="button__title mt--25 mb--15">초록 계열 : 실행 됨, 가능, 확인</h4>
+                <div class="example__row">
+                    <label class="badges badges--icon badges--green"><i class="ri-pass-pending-line"></i>badges</label>
+                    <label class="badges badges--icon badges--olive"><i class="ri-pass-pending-line"></i>badges</label>
+                </div>
+                <h4 class="button__title mt--25 mb--15">주황 계열 : 주의, 경고, 조심</h4>
+                <div class="example__row">
+                    <label class="badges badges--icon badges--orange"><i class="ri-pass-pending-line"></i>badges</label>
+                </div>
+                <h4 class="button__title mt--25 mb--15">빨강 계열 : 오류 (에러), 실행 불가</h4>
+                <div class="example__row">
+                    <label class="badges badges--icon badges--red"><i class="ri-pass-pending-line"></i>badges</label>
+                </div>
+                <!-- Modal -->
+                <h4 class="example__title mt--50 mb--25">Modal</h4>
+                <div class="example__row">
+                    <button type="button" class="btn btn--modal btn--cancel">취소</button>
+                    <button type="button" class="btn btn--modal btn--confirm">확인</button>
+                </div>
+                <!-- Btn group -->
+                <h4 class="example__title mt--50 mb--25">Button Group</h4>
+                <div class="btn__group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn--blue">Left</button>
+                    <button type="button" class="btn btn--blue">Middle</button>
+                    <button type="button" class="btn btn--blue">Right</button>
+                </div>
+                <!-- Dropdown -->
+                <h4 class="example__title mt--50 mb--25">Dropdown</h4>
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown__toggle" aria-expanded="false">Dropdown</button>
+                    <ul class="dropdown__menu show">
+                        <li><a class="dropdown__item" href="#">Action</a></li>
+                        <li><a class="dropdown__item" href="#">Another action</a></li>
+                        <li><a class="dropdown__item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown__divider"></li>
+                        <li><a class="dropdown__item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

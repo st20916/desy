@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="(주)지플러스" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>지플러스 디자인 시스템</title>
+
+        <link rel="icon" href="../images/logo_one.png" />
+        <link rel="stylesheet" href="../css/main.css" />
+
+        <script src="../js/gplus_design.js"></script>
+    </head>
+    <body>
+        <main class="design">
+            <!-- header -->
+            <header class="header">
+                <div class="header__inner">
+                    <button type="button" class="btn btn--transparent header__button" id="menu">
+                        <i class="ri-menu-2-line"></i>
+                    </button>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"><a href="/">Design System</a></li>
+                            <li class="breadcrumb__item active"><a href="./card.html">Card</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </header>
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h1 class="sidebar__title">知플러스 디자인 시스템</h1>
+                <div class="sidebar__menu">
+                    <ul>
+                        <li><a href="./color.html">색</a></li>
+                        <li><a href="./layout.html">레이아웃</a></li>
+                        <li><a href="./typography.html">타이포그래피</a></li>
+                        <li><a href="./button.html">버튼</a></li>
+                        <li><a href="./icon.html">아이콘</a></li>
+                        <li><a href="./form.html">Form</a></li>
+                        <li><a href="./card.html">카드</a></li>
+                        <li><a href="./toast.html">Toast</a></li>
+                        <li><a href="./menu.html">메뉴</a></li>
+                        <li><a href="./tab.html">탭</a></li>
+                        <li><a href="./table.html">테이블</a></li>
+                        <li><a href="./progress.html">Progress</a></li>
+                        <li><a href="./login/login.html" target="_blank">로그인 페이지</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- container -->
+            <div class="container">
+                <button type="button" id="topBtn" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
+                <h1 class="container__title mb--25">Card</h1>
+                <h6 class="button__title mt--25 mb--15">기본 카드</h6>
+                <div class="example__row">
+                    <div class="card">
+                        <img src="../images/card/test_card.png" alt="Image" class="card__img__top" />
+                        <div class="card__body">
+                            <h6 class="card__title">Kristy</h6>
+                            <p class="card__date">2023-11-14</p>
+                            <p class="card__text">Kristy is an art director living in New York.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="card__content">
+                                <i class="ri-user-3-fill"></i>
+                                <span>22 Friends</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <h6 class="button__title mt--25 mb--15">버튼 하나만 있는 조합의 카드</h6>
+                <div class="example__row">
+                    <div class="card" data-card-type="full-button">
+                        <div class="card__body">
+                            <h6 class="card__title">Kristy</h6>
+                            <p class="card__text">Kristy is an art director living in New York.</p>
+                        </div>
+                        <div class="card__footer">
+                            <button type="button" class="btn btn--icon">
+                                <i class="ri-add-line"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+            </div>
+        </main>
+    </body>
+</html>

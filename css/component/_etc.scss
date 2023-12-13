@@ -1,0 +1,135 @@
+/*
+*   etc
+*
+*   @author GPLUS
+*
+*/
+@for $i from 0 through 50 {
+    .mt--#{$i} {
+        margin-top: #{$i}px;
+    }
+
+    .mb--#{$i} {
+        margin-bottom: #{$i}px;
+    }
+
+    .ml--#{$i} {
+        margin-left: #{$i}px;
+    }
+
+    .mr--#{$i} {
+        margin-right: #{$i}px;
+    }
+
+    .mx--#{$i} {
+        margin-left: #{$i}px;
+        margin-right: #{$i}px;
+    }
+
+    .my--#{$i} {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+    }
+
+    .pt--#{$i} {
+        padding-top: #{$i}px;
+    }
+
+    .pb--#{$i} {
+        padding-bottom: #{$i}px;
+    }
+
+    .pl--#{$i} {
+        padding-left: #{$i}px;
+    }
+
+    .pr--#{$i} {
+        padding-right: #{$i}px;
+    }
+
+    .px--#{$i} {
+        padding-left: #{$i}px;
+        padding-right: #{$i}px;
+    }
+
+    .py--#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+    }
+}
+
+.ml--auto {
+    margin-left: auto;
+}
+
+.mr--auto {
+    margin-right: auto;
+}
+
+.cursor_pointer,
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// ########################## Colors
+.color__item {
+    height: 150px;
+
+    .color {
+        height: 90px;
+    }
+
+    .color__content {
+        height: 60px;
+        padding: 10px;
+        background: {
+            color: #F3F3F3;
+        }
+        border: {
+            radius: 0 0 4px 4px;
+        }
+
+        strong {
+            display: block;
+            font: {
+                size: rem(14);
+                weight: 600;
+            }
+            color: #262626;
+        }
+
+        span {
+            font: {
+                size: rem(12);
+                weight: 400;
+            }
+            color: #656565;
+        }
+    }
+}
+
+// ########################## Icons
+.icon__item {
+    width: 200px;
+    text-align: center;
+
+    i {
+        font: {
+            size: rem(24);
+        }
+        color: #000;
+    }
+
+    span {
+        display: block;
+        color: #afb7c7;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .color__item {
+        .color__content {
+            padding: 10px 20px;
+        }
+    }
+}

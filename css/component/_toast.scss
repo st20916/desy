@@ -1,0 +1,73 @@
+/*
+*   Toast
+*
+*   @author GPLUS
+*
+*/
+// ########################## Default Toast
+.toast_container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.toast {
+    opacity: 0;
+    visibility: hidden;
+    margin: auto;
+    height: auto;
+    z-index: 9999;
+    padding: 12px 20px;
+    margin: {
+        bottom: 10px;
+    }
+    border: {
+        width: 1px;
+        style: solid;
+        radius: 4px;
+    }
+    transition: .4s;
+}
+
+.toast_header {
+    position: relative;
+    margin: {
+        bottom: 7px;
+    }
+    font: {
+        size: rem(15);
+        weight: 600;
+    }
+}
+
+.toast_body {
+    position: relative;
+    font: {
+        size: rem(13);
+        weight: 500;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .toast_header {
+        font: {
+            size: rem(16);
+        }
+    }
+    
+    .toast_body {
+        font: {
+            size: rem(14);
+        }
+    }
+}
+
+@media all and (min-width: 1240px) {
+    .toast_header {
+        font: {
+            size: rem(18);
+        }
+    }
+}

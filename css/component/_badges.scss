@@ -1,0 +1,50 @@
+/*
+*   badges
+*
+*   @author GPLUS
+*
+*/
+// ########################## Badges Color Map
+$badge-color: (
+    'blue': #51A1FF,
+    'navy': #1371AA,
+    'green': #4DA089,
+    'olive': #96B10A,
+    'orange': #EF930F,
+    'red': #EB5E38
+);
+
+.badges {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 4px 7px;
+    border: {
+        radius: 2px;
+    }
+    font: {
+        size: rem(12);
+        weight: 400;
+    }
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+// ########################## Badges Status
+.badges--icon {
+    @include center;
+    gap: 5px;
+    padding: 5px 8px;
+}
+
+// ########################## Badges Color
+@each $name, $color in $badge-color {
+    .badges--#{$name} {
+        background: {
+            color: $color;
+        }
+        color: #fff;
+    }
+}

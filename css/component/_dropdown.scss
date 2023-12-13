@@ -1,0 +1,105 @@
+/*
+*   Dropdown
+*
+*   @author GPLUS
+*
+*/
+// ########################## Dropdown
+.dropup,
+.dropend,
+.dropdown,
+.dropstart,
+.dropup-center,
+.dropdown-center {
+    position: relative;
+}
+
+.dropdown__toggle,
+.dropdown-toggle {
+    white-space: nowrap;
+    @include caret();
+}
+
+.dropdown__menu,
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    min-width: 160px;
+    padding: 8px 0;
+    margin: 0;
+    background: {
+        color: #fff;
+        clip: padding-box;
+    }
+    border: {
+        width: 1px;
+        style: solid;
+        color: rgba(0, 0, 0, .175);
+        radius: 5px;
+    }
+    font: {
+        size: rem(14);
+    }
+    color: #555;
+    text-align: left;
+    list-style: none;
+    z-index: 1000;
+
+    &.show {
+        display: block;
+    }
+}
+
+.dropdown__item,
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 4px 16px;
+    clear: both;
+    background: {
+        color: transparent;
+    }
+    border: 0;
+    white-space: nowrap;
+    font: {
+        weight: 400;
+    }
+    color: #555;
+    text: {
+        align: left;
+        decoration: none;
+    }
+
+    &:focus,
+    &:hover {
+        background: {
+            color: #e9ecef;
+        }
+        color: #1e2125;
+    }
+}
+
+.dropdown__divider,
+.dropdown-divider {
+    height: 0;
+    margin: 8px 0;
+    overflow: hidden;
+    border: {
+        top: 1px solid rgba(0, 0, 0, .175);
+    }
+    opacity: 1;
+}
+
+.dropdown__header,
+.dropdown-header {
+    display: block;
+    padding: 8px 16px;
+    margin: {
+        bottom: 0;
+    }
+    font: {
+        size: rem(14);
+    }
+    color: #6c757d;
+    white-space: nowrap;
+}

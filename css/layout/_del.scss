@@ -1,0 +1,26 @@
+/*
+*   Default Layout
+*
+*   @author GPLUS
+*
+*/
+.inner {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+}
+
+// ########################## 기본 레이아웃
+[data-layout-type="default"] {
+    // TODO : 어차피, 프로젝트 적용 시 없어 질 CSS
+    > * {
+        outline: 1px solid #000;
+        font-size: rem(14);
+        text-align: center;
+    }
+
+    .visual {
+        position: relative;
+        width: 100%;
+    }
+}

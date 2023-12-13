@@ -1,0 +1,164 @@
+/**
+*   body
+*
+*   @author GPLUS
+*/
+// ########################## Sidebar
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 200px;
+    height: 100vh;
+    background: {
+        color: #1B1C1D;
+    }
+    z-index: 1001;
+    transition: .4s;
+
+    &.open {
+        left: 0;
+    }
+}
+
+.sidebar__title {
+    padding: 20px;
+    font: {
+        size: rem(20);
+        weight: 500;
+    }
+    color: #fff;
+    word-break: keep-all;
+}
+
+.sidebar__menu {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 88px);
+    overflow: hidden auto;
+
+    a {
+        display: block;
+        margin: 0 0 5px;
+        padding: 10px 25px;
+        background: {
+            color: rgba(51, 51, 51, .85);
+        }
+        font: {
+            size: rem(14);
+        }
+        color: #fff;
+        text: {
+            decoration: none;
+        }
+    }
+}
+
+// ########################## Container
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+// ########################## Container title
+.container__title {
+    position: relative;
+    font: {
+        size: rem(18);
+        weight: 600;
+    }
+    color: rgba(0, 0, 0, .87);
+}
+
+// ########################## Main title
+.cmm__title {
+    position: relative;
+    font: {
+        size: rem(18);
+        weight: 600;
+    }
+    color: rgba(51, 51, 51, .87);
+}
+
+// ########################## Main title
+.cmm__sub__title {
+    position: relative;
+    font: {
+        size: rem(14);
+        weight: 400;
+    }
+    color: rgba(0, 0, 0, .6);
+}
+
+
+@media all and (min-width: 1025px) {
+    // ########################## Sidebar
+    .sidebar__title {
+        padding: 30px 20px;
+    }
+
+    .sidebar__menu {
+        a {
+            padding: 15px 25px;
+            font: {
+                size: rem(15);
+            }
+        }
+    }
+
+    // ########################## Container
+    .container {
+        position: relative;
+        padding: 30px;
+    }
+
+    // ########################## Main title
+    .container__title {
+        font: {
+            size: rem(20);
+        }
+    }
+
+    // ########################## Main title
+    .cmm__title {
+        font: {
+            size: rem(20);
+        }
+    }
+
+    // ########################## Main title
+    .cmm__sub__title {
+        font: {
+            size: rem(15);
+        }
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    // ########################## Main title
+    .container__title {
+        font: {
+            size: rem(24);
+        }
+    }
+
+    // ########################## Main title
+    .cmm__title {
+        font: {
+            size: rem(24);
+        }
+    }
+
+    // ########################## Main title
+    .cmm__sub__title {
+        font: {
+            size: rem(16);
+        }
+    }
+}
