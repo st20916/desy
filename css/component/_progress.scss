@@ -1,3 +1,9 @@
+/*
+*   Progress bar
+*
+*   @author GPLUS
+*
+*/
 @if $enable-transitions {
     @keyframes progress-bar-stripes {
         0% { 
@@ -6,7 +12,7 @@
     }
 }
 
-  
+// ########################## Progress bar -- Default CSS
 .progress,
 .progress-stacked,
 .progress_stacked {
@@ -57,12 +63,14 @@
     width: 100%;
 }
 
+// ########################## Progress bar -- Progress
 .progress {
     + .progress {
         margin-top: rem(16);
     }
 }
 
+// ########################## Progress bar -- Color
 .bar-bg-success,
 .bar_bg_success {
     background: {
@@ -108,6 +116,7 @@
     height: 60px;
 }
 
+// ########################## Progress bar -- Transition
 @if $enable-transitions {
     .progress-bar-animated,
     .progress_bar_animated {

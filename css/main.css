@@ -4791,6 +4791,12 @@ caption {
     -webkit-overflow-scrolling: touch;
   }
 }
+/*
+*   Progress bar
+*
+*   @author GPLUS
+*
+*/
 @keyframes progress-bar-stripes {
   0% {
     background-position-x: 20px;
@@ -4904,6 +4910,64 @@ caption {
   }
 }
 
+/*
+*   Message
+*
+*   @author GPLUS
+*
+*/
+.cmm_info_wrap,
+.cmm-info-wrap {
+  position: relative;
+}
+
+.info_title,
+.info-title {
+  position: relative;
+  padding: 20px 13px 20px 93px;
+  background-color: #558CE7;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  z-index: 2;
+}
+.info_title img,
+.info-title img {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(0, -50%);
+}
+
+.info_content,
+.info-content {
+  position: relative;
+  top: -20px;
+  min-height: 115px;
+  padding: 40px 32px 26px;
+  background-color: #F8F9FC;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.info_content > *,
+.info-content > * {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #666666;
+}
+
+@media all and (min-width: 992px) {
+  .info_title,
+  .info-title {
+    font-size: 2rem;
+  }
+  .info_content > *,
+  .info-content > * {
+    font-size: 1.6rem;
+  }
+}
 /* layout */
 /*
 *   header

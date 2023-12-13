@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     /* Sidebar Open */
     const menuBtn = document.querySelector('#menu'),
-          sidebar = document.querySelector('.sidebar'),
-          dBody = document.querySelector('.design');
+                sidebar = document.querySelector('.sidebar'),
+                dBody = document.querySelector('.design');
     const imports = document.querySelectorAll('[data-event="import"]');
     const viewCont = document.querySelector('.container');
     
