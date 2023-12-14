@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 dBody = document.querySelector('.design');
     const imports = document.querySelectorAll('[data-event="import"]');
     const viewCont = document.querySelector('.container');
-    
+
     menuBtn.addEventListener('click', function(e) {
         e.preventDefault();
     

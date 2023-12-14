@@ -8,7 +8,7 @@
 
         <link rel="icon" href="../images/logo_one.png" />
         <link rel="stylesheet" href="../css/main.css" />
-    
+
         <script src="../js/gplus_design.js"></script>
     </head>
     <body>
@@ -18,11 +18,11 @@
                 <div class="header__inner">
                     <button type="button" class="btn btn--transparent header__button" id="menu">
                         <i class="ri-menu-2-line"></i>
-                    </button>
+                    </button> 
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb__item"><a href="/">Design System</a></li>
-                            <li class="breadcrumb__item active"><a href="./toast.html">Toast</a></li>
+                            <li class="breadcrumb__item active"><a href="./list_group.html">List Group</a></li>
                         </ol>
                     </nav>
                 </div>
@@ -53,15 +53,18 @@
             <!-- container -->
             <div class="container">
                 <button type="button" id="topBtn" class="btn btn--icon btn--top"><i class="ri-skip-up-line"></i>TOP</button>
-                <h1 class="container__title mb--25">Toast</h1>
-                <div class="example__row">
-                    <button type="button" class="btn btn--sm" onclick="showToast('info', '안내 메시지입니다.', '안내 테스트입니다.')">안내 Toast</button>
-                    <button type="button" class="btn btn--sm btn--blue" onclick="showToast('success', '성공 메시지입니다.', '성공 테스트입니다.')">성공 Toast</button>
-                    <button type="button" class="btn btn--sm btn--orange" onclick="showToast('warning', '경고 메시지입니다.', '경고 테스트입니다.')">경고 Toast</button>
-                    <button type="button" class="btn btn--sm btn--mint" onclick="showToast('error', '에러 메시지입니다.', '에러 테스트입니다.')">에러 Toast</button>
+                <h1 class="container__title mb--25">List Group</h1>
+                <!---->
+                <h6 class="button__title mb--15">리스트 그룹</h6>
+                <div>
+                    <ul class="list_group">
+                        <li class="list_group_item active">An Item</li>
+                        <li class="list_group_item">A second item</li>
+                        <li class="list_group_item">A third item</li>
+                        <li class="list_group_item">A fourth item</li>
+                        <li class="list_group_item disabled">And a fifth one</li>
+                    </ul>
                 </div>
-
-                <div class="toast_container" data-toast-container></div>
             </div>
         </main>
     </body>
